@@ -12,7 +12,57 @@
 </header>
 
 <main style="margin-top:64px;padding:16px;">
-    <!-- page content goes here -->
+    <style>
+    .profile-grid {
+        display: flex;
+        flex-direction: column; /* stack boxes vertically */
+        align-items: center;    /* center them horizontally */
+        justify-content: flex-start;
+        gap: 16px;
+        padding-top: 8px; /* keeps them near the top */
+        width: 100%;
+    }
+    .profile-box {
+        border: 2px solid #1976d2;
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+        max-width: 480px; /* constrains box width and centers it via .profile-grid */
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(25,118,210,0.06);
+    }
+    .profile-box h2 {
+        margin: 0 0 8px;
+        color: #0d47a1;
+        font-size: 1.1rem;
+    }
+    .profile-box ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+    </style>
+
+    <div class="profile-grid">
+        <section class="profile-box" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive design</li>
+            </ul>
+        </section>
+
+        <section class="profile-box" aria-labelledby="jobs-title">
+            <h2 id="jobs-title">Job Interests</h2>
+            <ul>
+                <li>Frontend Developer</li>
+                <li>UI/UX Designer</li>
+                <li>Web Accessibility</li>
+                <li>Remote opportunities</li>
+            </ul>
+        </section>
+    </div>
 </main>
 </body>
 </html>
